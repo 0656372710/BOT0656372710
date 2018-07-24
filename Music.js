@@ -4,7 +4,6 @@ const youtube = new YouTube('AIzaSyD_BjQo2udNk19iLr7pXYP7uQXG4O0xMpk');
 const queue = new Map();
 const Discord=require('discord.js');
 client=new Discord.Client();
-var priv=require('./Private.json');
 var servers = {};
 var prefix = '&';
 client.on("message", async message => {
@@ -180,4 +179,4 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
 	serverQueue.textChannel.send(`🎶 Start playing: **${song.title}**`);
 }
 });
-client.login(priv.token)
+client.login(process.env.TOKEN)
