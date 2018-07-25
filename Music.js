@@ -179,4 +179,4 @@ async function handleVideo(video, message, voiceChannel, playlist = false) {
 	serverQueue.textChannel.send(`🎶 Start playing: **${song.title}**`);
 }
 });
-client.login()
+client.login(process.env.TOKEN)
