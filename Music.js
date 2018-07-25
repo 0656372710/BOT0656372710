@@ -7,7 +7,7 @@ client=new Discord.Client();
 var servers = {};
 var prefix = '&';
 client.on('ready', function (evt) {
-	client.user.setGame("Premuim |&help");
+	client.user.setActivity("Premuim |&help");
 });
 client.on("message", async message => {
     var args = message.content.substring(prefix.length).split(" ");
