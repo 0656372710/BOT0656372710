@@ -6,7 +6,9 @@ const Discord=require('discord.js');
 client=new Discord.Client();
 var servers = {};
 var prefix = '&';
-client.user.setGame("Premuim |&help");
+client.on('ready', function (evt) {
+	client.user.setGame("Premuim |&help");
+});
 client.on("message", async message => {
     var args = message.content.substring(prefix.length).split(" ");
     if (!message.content.startsWith(prefix)) return;
